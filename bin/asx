@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var clc = require('cli-color');
+var axios = require('axios');
+
+const args = process.argv.slice(2);
+
+args.forEach(code => {
+	axios.get(`http://data.asx.com.au/data/1/share/${code}/prices?interval=daily&count=1`)
+		.then(res => res.data.data.forEach(data => {
+			console.log(clc.blue(`${data.code}`), clc.bold(`${data.close_price}`),
+				parseFloat(data.change_in_percent) >= 0 ? clc.red(`↑${data.change_in_percent}`) : clc.green(`↓${data.change_in_percent}`))
+		}))
+		.catch(
+			err => console.log(clc.red(`Can't get the stock info for ${code}`))
+		);
+});

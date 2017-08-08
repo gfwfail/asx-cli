@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "axios": "^0.16.2",
+    "cli-color": "^1.2.0"
+  },
+  "name": "asx-cli",
+  "version": "0.1.2",
+  "description": "An cli tool to check asx price.",
+  "main": "bin/asx",
+  "devDependencies": {},
+  "bin": {
+    "asx": "bin/asx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gfwfail/asx-cli.git"
+  },
+  "keywords": [
+    "asx",
+    "asx",
+    "price",
+    "asx",
+    "cli"
+  ],
+  "author": "Lu Ye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gfwfail/asx-cli/issues"
+  },
+  "homepage": "https://github.com/gfwfail/asx-cli#readme"
+}
